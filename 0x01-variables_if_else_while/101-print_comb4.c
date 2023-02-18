@@ -11,19 +11,26 @@
 int main(void)
 
 {
-	int i, j, k;
+	int d, p, q;
 
-	for (i = 0; i < 10; i++)
+	for (d = '0'; d < '9'; d++)
 	{
-	for (j = i + 1; j < 10; j++)
+
+	for (p = d + 1; p <= '9'; p++)
 	{
-	for (k = j + 1; k < 10; k++)
+
+	for (q = p + 1; q <= '9'; q++)
 	{
-	putchar('0' + i);
-	putchar('0' + j);
-	putchar('0' + k);
+	if ((p != d) !=q)
+	{
+	putchar(d);
+	putchar(p);
+	putchar(q);
+	if (d == '7' && p == '8')
+	continue;
 	putchar(',');
 	putchar(' ');
+	}
 	}
 	}
 	}
