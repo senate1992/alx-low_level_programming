@@ -11,35 +11,19 @@
 int main(void)
 
 {
+	int i, j, k;
 
-	int d, p, q;
-			for
-				(d = '0';
-				d < '9';
-				d++);
-
-
+	for (i = 0; i < 10; i++)
 	{
-
-	for (p = d + 1; p <= '9'; p++)
-
-
+	for (j = i + 1; j < 10; j++)
 	{
-
-	for (q = p + 1; q <= '9'; q++)
-
-
+	for (k = j + 1; k < 10; k++)
 	{
-	if ((p != d) != q)
-	{
-	putchar(d);
-	putchar(p);
-	putchar(q);
-	if (d == '7' && p == '8')
-	continue;
+	putchar('0' + i);
+	putchar('0' + j);
+	putchar('0' + k);
 	putchar(',');
 	putchar(' ');
-	}
 	}
 	}
 	}
