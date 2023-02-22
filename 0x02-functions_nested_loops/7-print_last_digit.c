@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * rPint_last_digit - This function print_last_digitof a given number
+ * print_last_digit - This function print_last_digitof a given number
  * @n: The number to be treated, This function print_last_digitof number
- * Return: Value of the last digit of number
+ * Return: print_last_digit
  *
  */
 
