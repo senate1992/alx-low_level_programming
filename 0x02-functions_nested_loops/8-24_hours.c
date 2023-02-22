@@ -2,8 +2,7 @@
 
 /**
  * Jack_bauer - Prints every minute of the day os Jack_bauer
- * @a: The number to be computed
- * Return: ...
+ * Return: jack_bauer
  */
 
 void jack_bauer(void)
