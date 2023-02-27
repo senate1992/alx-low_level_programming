@@ -2,7 +2,7 @@
 
 /**
  * swap_int - swap the values of intergers
- * @n:The first interger to be swapped
+ * @a:The first interger to be swapped
  * @b: Second interger to swapped
  * Return: nothing
  */
