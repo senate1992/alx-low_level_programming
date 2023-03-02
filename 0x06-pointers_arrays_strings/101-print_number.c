@@ -3,33 +3,20 @@
 /**
  * print_number - function that prints an integer
  * @n: the number to be printed
- * Return: void
+ *
  */
 
 void print_number(int n)
 {
-	int i = 1, j = 0, k = 0, l = 0;
-	int temp, temp2;
+	unsigned int num = n;
 
 	if (n < 0)
 	{
-		_putchar('-');
-		n *= -1;
+	_putchar('-');
+	num = -num;
 	}
-	temp = n;
-	temp2 = n;
-	while (temp > 9)
-	{
-		temp /= 10;
-		i *= 10;
-	}
-	while (i > 0)
-	{
-		j = temp2 / i;
-		k = j % 10;
-		l = k + '0';
-		_putchar(l);
-		temp2 %= i;
-		i /= 10;
-	}
+
+	if ((num / 10) > 0)
+	print_number(num / 10);
+	_putchar((num % 10) + '0');
 }
