@@ -7,24 +7,16 @@
  */
 int is_prime_number(int n)
 {
-	int prime = 1;
-	int i;
+	int d;
 
 	if (n <= 1)
+	return (0);
+	d = 2;
+	while (d < n)
 	{
-	prime = 0;
+	if (n % d == 0)
+	return (0);
+	d++;
 	}
-	else
-	{
-	for (i = 2; i < n / 2; i++)
-	{
-	if (n % i == 0)
-	{
-	prime = 0;
-	break;
-	}
-	}
-	}
-
-	return (prime);
+	return (1);
 }
