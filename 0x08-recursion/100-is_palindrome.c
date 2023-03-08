@@ -15,7 +15,8 @@ int _strlen_recursion(char *s)
 }
 
 /**
- * @s: input
+ * comparator - compare each character of the string
+ * @s: string
  * @n1: second input
  * @n2: third input
  * Return: .
