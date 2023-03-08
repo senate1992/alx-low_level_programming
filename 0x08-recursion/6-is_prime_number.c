@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -6,20 +5,26 @@
  * @n: input
  * Return: Always 0.
  */
-
 int is_prime_number(int n)
 {
-	int i, isPrime = 1;
+	int prime = 1;
+	int i;
 
-	if (n == 2)
-	isPrime = 1;
-	else if (n == 1 || n % 2 == 0)
-	isPrime = 0;
-
-	for (i = 3; i <= n / 2; i += 2) {
+	if (n <= 1)
+	{
+	prime = 0;
+	}
+	else
+	{
+	for (i = 2; i < n / 2; i++)
+	{
 	if (n % i == 0)
-	isPrime = 0;
+	{
+	prime = 0;
+	break;
+	}
+	}
 	}
 
-	return isPrime;
+	return prime;
 }
