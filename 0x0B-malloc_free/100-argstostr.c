@@ -6,41 +6,47 @@
 * argstostr - concatenates all the arguments of program
 * @ac: number of arguments
 * @av: array of strings
-*
 * Return: string
 */
 
 char *argstostr(int ac, char **av)
 {
-	int i, j, k, len;
-	char *str;
+
+	int ch = 0, i = 0, j = 0, k = 0;
+	char *s;
 
 	if (ac == 0 || av == NULL)
 	return (NULL);
 
-	for (i = 0; i < ac; i++)
+	while (i < ac)
 	{
-	for (j = 0; av[i][j] != '\0'; j++)
-	len++;
-	len++;
+		while (av[i][j])
+		{
+		ch++;
+		j++;
+		}
+
+	j = 0;
+	i++;
 	}
-
-	str = (char *) malloc(len * sizeof(char));
-	if (str == NULL)
-	return (NULL);
-
-	k = 0;
-	for (i = 0; i < ac; i++)
+	s = malloc((sizeof(char) * ch) + ac + 1);
+	i = 0;
+	while (av[i])
 	{
-	for (j = 0; av[i][j] != '\0'; j++)
+	while (av[i][j])
 	{
-	str[k] = av[i][j];
+	s[k] = av[i][j];
 	k++;
+	j++;
 	}
-	str[k] = '\n';
-	k++;
-	}
-	str[k] = '\0';
 
-	return (str);
+	s[k] = '\n';
+	j = 0;
+	k++;
+	i++;
+	}
+
+	k++;
+	s[k] = '\0';
+	return (s);
 }
