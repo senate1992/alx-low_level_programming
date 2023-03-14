@@ -2,10 +2,11 @@
 #include <stdlib.h>
 
 /**
-* word_len – locate the index
-* @str: the string to be located
-* Return: the index marking the end
-*/
+ * word_len – locate the index marking the end
+ * @str: the string to be located
+ * Return: the index marking the end
+ */
+
 int word_len(char *str)
 {
 	int index = 0, len = 0;
@@ -20,10 +21,10 @@ int word_len(char *str)
 }
 
 /**
-* count_words – count the number of words
-* @str: the string to be searched
-* Return: the number of words
-*/
+ * count_words – count the number of words contained within a string
+ * @str: the string to be searched
+ * Return: the number of words
+ */
 
 int count_words(char *str)
 {
@@ -45,10 +46,11 @@ int count_words(char *str)
 }
 
 /**
-* strtow – splits a string
-* @str: the string to split
-* Return: if str = NULL, str = "", or the function fails
-*/
+ * strtow – splits a string
+ * @str: the string to split
+ * Return: if str = NULL, str = "", or the function fails
+ */
+
 char **strtow(char *str)
 {
 	char **strings;
@@ -84,6 +86,7 @@ char **strtow(char *str)
 	}
 
 			for (l = 0; l < letters; l++)
+
 		strings[w][l] = str[index++];
 
 		strings[w][l] = '\0';
