@@ -2,7 +2,7 @@
 #include "dog.h"
 
 int _strlen(char *s);
-char *_strcpy(char *src);
+char *_strcpy(char *src);
 
 /**
  * new_dog - ...
@@ -12,9 +12,9 @@ char *_strcpy(char *src);
  * Return: ...
  */
 
-dot_t *new_dog(char *name, float age, char *owner)
+dog_t *new_dog(char *name, float age, char *owner)
 {
-	dot_t *max_dog;
+	dog_t *max_dog;
 	int name_l = 0, own_l = 0;
 
 	if (name != NULL && owner != NULL)
@@ -22,7 +22,6 @@ dot_t *new_dog(char *name, float age, char *owner)
 		name_l = _strlen(name) + 1;
 		own_l = _strlen(owner) + 1;
 		max_dog = malloc(sizeof(dog_t));
-
 		if (max_dog == NULL)
 			return (NULL);
 
@@ -78,7 +77,7 @@ int _strlen(char *s)
 
 char *_strcpy(char *dest, char *src)
 {
-	int = i;
+	int i = 0;
 
 	for (i = 0; src[i] != '\0'; i++)
 	{
