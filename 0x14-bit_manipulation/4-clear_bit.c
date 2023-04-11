@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdlib.h>
+
 
 /**
  * clear_bit - sets value to clear
